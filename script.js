@@ -42,7 +42,7 @@ function color(e){
 
   	//if opacity checked --> build opacity with each pass, starting at .1
   	if ((opacitySelector.checked == true) && (currentOpacity == 1.0)) {
-  		e.target.style.opacity = '0.3';
+  		e.target.style.opacity = '0.1';
   	} else if ((opacitySelector.checked == true) && (currentOpacity < 1.0)) {
   		//var newOpacity = parseFloat(e.target.style.opacity) + 0.1;
   		currentOpacity += 0.1;
