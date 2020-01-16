@@ -3,6 +3,9 @@ drawGrid(16);
 const adjustGridbtn = document.getElementById('size');
 adjustGridbtn.addEventListener('click', reGrid);
 
+//const randomSelector = document.getElementById('random');
+//randomSelector.addEventListener('click', random);
+
 function reGrid() {
 	// Clear the 'container' and get new size from input box and redraw grid with user input
 	document.querySelectorAll('.box').forEach(e => e.parentNode.removeChild(e));
@@ -18,16 +21,31 @@ function drawGrid(size){
 	for (var i = 0; i < (size*size); i++) {
 		let newDiv = document.createElement('div');
 		newDiv.className = 'box';
-		newDiv.style.opacity = "0.1";
+		//newDiv.style.opacity = "0.1";
 		newDiv.addEventListener('mouseover', color);
 		div.appendChild(newDiv);
 	}
 }
 
 function color(e){
-	var colorOption = document.getElementById('color').value;
-	console.log(colorOption);
-	e.target.style.backgroundColor = colorOption;
-	var newOpacity = parseFloat(e.target.style.opacity) + 0.1;
-	e.target.style.opacity = newOpacity.toString();
+	//if random checked --> generate random RGB value
+	//uses randomColor.js by David Merfield <-- See readME.md for source attribution
+	var randomSelector = document.querySelector('input[id="random"]');
+	var opacitySelector = document.querySelector('input[id="opacity"]');
+	var currentOpacity = Number(e.target.style.opacity);
+
+  	if (randomSelector.checked == true) {
+  		e.target.style.backgroundColor = randomColor({luminosity: 'bright'});
+  	} else {
+  		e.target.style.backgroundColor = document.getElementById('color').value;
+  	}
+
+  	//if opacity checked --> build opacity with each pass, starting at .1
+  	if ((opacitySelector.checked == true) && (currentOpacity == 1.0)) {
+  		e.target.style.opacity = '0.3';
+  	} else if ((opacitySelector.checked == true) && (currentOpacity < 1.0)) {
+  		//var newOpacity = parseFloat(e.target.style.opacity) + 0.1;
+  		currentOpacity += 0.1;
+		e.target.style.opacity = currentOpacity.toString();
+  	}
 }

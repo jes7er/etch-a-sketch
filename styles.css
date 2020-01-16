@@ -10,6 +10,7 @@ html {
     color:black;
 }
 
+
 h2 {
 	text-align: center;
 	color:black;
@@ -43,6 +44,13 @@ input[type='text'] {
 	margin-right: auto;
 }
 
+.instructions {
+	padding-top:50px;
+	width:800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .left {
 	float:left;
 	display: inline-block;
@@ -51,6 +59,12 @@ input[type='text'] {
 .right {
 	float:right;
 	display: inline-block;
+}
+
+.middle {
+	margin-left:auto;
+	margin-right:auto;
+	padding-left: 250px;
 }
 
 input[type="color"] {

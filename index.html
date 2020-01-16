@@ -13,12 +13,30 @@
 	<div class='options'>
 		<div class='left'>
 			<input type = 'text' id='newSize'>
-			<button id='size' class=''>Re-Size / Erase</button>
+			<button id='size'>Re-Size / Erase</button>
+		</div>
+		<div class='middle'>
+			<input type="checkbox" id="random" value="random" class="left">
+			<label for="random" class="left">Randomize Colors</label>
+			<br>
+			<input type="checkbox" id="opacity" value="opacity" class="left">
+			<label for="opacity" class="left">Build Opacity</label>
 		</div>
 		<div class='right'>
 			<input class='color' type="color" id ="color" value="#ff0000"></p>
 		</div>
 	</div>
+	<div class='instructions'>
+		<h3>Instructions</h3>
+		<p>1. The Re-Draw / Erase button will clear the board and render a new sketch board.  The value you enter determines the number of boxes for both the height and width, but doesn't change the overall sketch pad dimensions.</p>
+		<p>2. Move your mouse over the boxes you want to color.</p>
+		<p>3. Use the color picker to change the color you want boxes </p>
+		<p>4. The randomize checkbox overrides the color picker and generates a random color for each box you mouse over.</p>
+		<p>5. The build opacity option builds the color density of the box with each successive pass.  Be careful, the boxes will
+			retain the opacity setting even if you change colors and pass back over it, which allows shading!</p>
+		<p>6. Have fun!</p>
+	</div>
 </body>
 <script src="script.js"></script>
+<script src="randomColor.js"></script>
 </html>
