@@ -1,18 +1,18 @@
 html {
     /* Height and width fallback for older browsers. */
-    background-color: teal;
+    background-color: white;
     /* Set the height to match that of the viewport. */
     height: 100vh;
     /* Set the width to match that of the viewport. */
     width: 100vw;
     /* Remove any browser-default margins. */
     margin: 0;
-    color:white;
+    color:black;
 }
 
 h2 {
 	text-align: center;
-	color:white;
+	color:black;
 }
 
 input[type='text'] {

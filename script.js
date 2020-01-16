@@ -18,6 +18,7 @@ function drawGrid(size){
 	for (var i = 0; i < (size*size); i++) {
 		let newDiv = document.createElement('div');
 		newDiv.className = 'box';
+		newDiv.style.opacity = "0.1";
 		newDiv.addEventListener('mouseover', color);
 		div.appendChild(newDiv);
 	}
@@ -27,4 +28,6 @@ function color(e){
 	var colorOption = document.getElementById('color').value;
 	console.log(colorOption);
 	e.target.style.backgroundColor = colorOption;
+	var newOpacity = parseFloat(e.target.style.opacity) + 0.1;
+	e.target.style.opacity = newOpacity.toString();
 }
