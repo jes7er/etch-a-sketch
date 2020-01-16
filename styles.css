@@ -1,0 +1,67 @@
+html {
+    /* Height and width fallback for older browsers. */
+    background-color: purple;
+    /* Set the height to match that of the viewport. */
+    height: 100vh;
+    /* Set the width to match that of the viewport. */
+    width: 100vw;
+    /* Remove any browser-default margins. */
+    margin: 0;
+    color:white;
+}
+
+h2 {
+	text-align: center;
+	color:white;
+}
+
+input[type='text'] {
+	width: 70px;
+	border: 2px solid #000;
+	border-radius: 5px;
+	padding-left:10px;
+}
+
+.container {
+	margin-left:auto;
+	margin-right:auto;
+	display: grid;
+  	background-color: #000;
+  	width: 500px;
+  	height: 500px;
+}
+
+.box {
+	background-color: #fff;
+	border: thin solid lightgrey;
+	border-collapse: collapse;
+}
+
+.options {
+	width:500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.left {
+	float:left;
+	display: inline-block;
+}
+
+.right {
+	float:right;
+	display: inline-block;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	border: none;
+	width: 32px;
+	height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
